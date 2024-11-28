@@ -11,6 +11,99 @@
     />
   </head>
   <body class="font-sans antialiased bg-gray-100 text-gray-900">
+    <!-- Menu Superior -->
+    <header class="bg-white shadow-md">
+      <div class="container mx-auto flex justify-between items-center p-4">
+        <!-- Logo -->
+        <img
+          src="https://guilhermeruj.github.io/mrg/assets/logo.png"
+          alt="Logo da Construtora"
+          class="h-8"
+        />
+
+        <!-- Menu de Navegação -->
+        <nav>
+          <!-- Menu de hambúrguer visível em telas pequenas -->
+          <div class="block lg:hidden">
+            <button
+              id="menu-toggle"
+              class="text-gray-600 hover:text-blue-500 focus:outline-none"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                class="w-6 h-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                ></path>
+              </svg>
+            </button>
+          </div>
+
+          <!-- Menu para telas grandes -->
+          <ul id="menu" class="hidden lg:flex space-x-6 text-sm">
+            <li><a href="https://guilhermeruj.github.io/mrg/index.html" class="hover:text-blue-500">Home</a></li>
+            <li>
+              <a href="https://guilhermeruj.github.io/mrg/index.html#servicos" class="hover:text-blue-500">Serviços</a>
+            </li>
+            <li>
+              <a href="https://guilhermeruj.github.io/mrg/index.html#quem-somos" class="hover:text-blue-500">Quem Somos</a>
+            </li>
+            <li><a href="https://guilhermeruj.github.io/mrg/index.html#equipe" class="hover:text-blue-500">Equipe</a></li>
+            <li>
+              <a href="https://guilhermeruj.github.io/mrg/index.html#portfolio" class="hover:text-blue-500">Portfolio</a>
+            </li>
+            <li>
+              <a href="https://guilhermeruj.github.io/mrg/contato.html" class="hover:text-blue-500">Contato</a>
+            </li>
+          </ul>
+
+          <!-- Menu de hambúrguer, visível em telas pequenas -->
+          <div
+            id="mobile-menu"
+            class="absolute z-50 border right-5 lg:hidden hidden rounded bg-white shadow-md flex-col items-center"
+          >
+            <ul class="p-4 space-y-4">
+              <li><a href="https://guilhermeruj.github.io/mrg/index.html#home" class="hover:rgba(2, 73, 89, 1)">Home</a></li>
+              <li>
+                <a href="https://guilhermeruj.github.io/mrg/index.html#servicos" class="hover:rgba(2, 73, 89, 1)"
+                  >Serviços</a
+                >
+              </li>
+              <li>
+                <a href="https://guilhermeruj.github.io/mrg/index.html#quem-somos" class="hover:rgba(2, 73, 89, 1)"
+                  >Quem Somos</a
+                >
+              </li>
+              <li>
+                <a href="https://guilhermeruj.github.io/mrg/index.html#equipe" class="hover:rgba(2, 73, 89, 1)">Equipe</a>
+              </li>
+              <li>
+                <a href="https://guilhermeruj.github.io/mrg/index.html#portfolio" class="hover:rgba(2, 73, 89, 1)"
+                  >Portfolio</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://guilhermeruj.github.io/mrg/contato.html"
+                  class="hover:rgba(2, 73, 89, 1)"
+                  >Contato</a
+                >
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Links de Redes Sociais -->
+
     <!-- Formulário de Contato -->
     <section class="container mx-auto my-12 p-6 grid md:grid-cols-2 gap-8">
       <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
@@ -60,5 +153,42 @@
         ></iframe>
       </div>
     </section>
+
+    <section class="bg-white shadow-md py-6 mt-4">
+        <div class="container mx-auto flex justify-center space-x-6">
+          <a href="https://www.instagram.com/seu_perfil" target="_blank" class="hover:text-blue-500">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
+              alt="Instagram"
+              class="h-10"
+            />
+          </a>
+          <a href="https://www.facebook.com/seu_perfil" target="_blank" class="hover:text-blue-500">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg"
+              alt="Facebook"
+              class="h-10"
+            />
+          </a>
+        </div>
+      </section>
+
+    <a href="https://wa.me/5599999999999" target="_blank" id="whatsapp-button">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+    </a>
+    <!-- Rodapé -->
+    <footer class="bg-gray-800 text-white p-6 text-center">
+      <p>© 2024 MRG Construtora. Todos os direitos reservados.</p>
+    </footer>
+    <script src="https://guilhermeruj.github.io/mrg/js/app.js"></script>
+  </body>
+  <script>
+    const menuToggle = document.getElementById("menu-toggle");
+    const menu = document.getElementById("mobile-menu");
+
+    menuToggle.addEventListener("click", () => {
+      menu.classList.toggle("hidden");
+    });
+  </script>
   </body>
 </html>
