@@ -4,7 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MRG</title>
-    <link rel="stylesheet" href="https://guilhermeruj.github.io/mrg/css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://guilhermeruj.github.io/mrg/css/styles.css"
+    />
     <script src="https://unpkg.com/vue@3"></script>
     <link
       href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
@@ -12,94 +15,145 @@
     />
   </head>
   <body class="font-sans antialiased bg-gray-200 text-gray-900">
-    <!-- Menu Superior -->
-    <header class="bg-white shadow-md">
-      <div class="container mx-auto flex justify-between items-center p-4">
-        <!-- Logo -->
-        <img src="https://guilhermeruj.github.io/mrg/assets/logo.png" alt="Logo da Construtora" class="h-8" />
+    <div id="app">
+      <!-- Menu Superior -->
+      <header class="bg-white shadow-md">
+        <div class="container mx-auto flex justify-between items-center p-4">
+          <!-- Logo -->
+          <img
+            src="https://guilhermeruj.github.io/mrg/assets/logo.png"
+            alt="Logo da Construtora"
+            class="h-8"
+          />
 
-        <!-- Menu de Navegação -->
-        <nav>
-          <!-- Menu de hambúrguer visível em telas pequenas -->
-          <div class="block lg:hidden">
-            <button
-              id="menu-toggle"
-              class="text-gray-600 hover:text-blue-500 focus:outline-none"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                class="w-6 h-6"
+          <!-- Menu de Navegação -->
+          <nav>
+            <!-- Menu de hambúrguer visível em telas pequenas -->
+            <div class="block lg:hidden">
+              <button
+                id="menu-toggle"
+                class="text-gray-600 hover:text-blue-500 focus:outline-none"
               >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M4 6h16M4 12h16M4 18h16"
-                ></path>
-              </svg>
-            </button>
-          </div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  class="w-6 h-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h16M4 18h16"
+                  ></path>
+                </svg>
+              </button>
+            </div>
 
-          <!-- Menu para telas grandes -->
-          <ul id="menu" class="hidden lg:flex space-x-6 text-sm">
-            <li><a href="https://guilhermeruj.github.io/mrg/index.html#home" class="hover:text-blue-500">Home</a></li>
-            <li>
-              <a href="https://guilhermeruj.github.io/mrg/index.html#servicos" class="hover:text-blue-500">Serviços</a>
-            </li>
-            <li>
-              <a href="https://guilhermeruj.github.io/mrg/index.html#quem-somos" class="hover:text-blue-500">Quem Somos</a>
-            </li>
-            <li><a href="https://guilhermeruj.github.io/mrg/index.html#equipe" class="hover:text-blue-500">Equipe</a></li>
-            <li>
-              <a href="https://guilhermeruj.github.io/mrg/index.html#portfolio" class="hover:text-blue-500">Portfolio</a>
-            </li>
-            <li>
-              <a href="https://guilhermeruj.github.io/mrg/contato.html" class="hover:text-blue-500">Contato</a>
-            </li>
-          </ul>
-
-          <!-- Menu de hambúrguer, visível em telas pequenas -->
-          <div
-            id="mobile-menu"
-            class="absolute z-50 border right-5 lg:hidden hidden rounded bg-white shadow-md flex-col items-center"
-          >
-            <ul class="p-4 space-y-4">
-              <li><a href="https://guilhermeruj.github.io/mrg/index.html#home" class="hover:rgba(2, 73, 89, 1)">Home</a></li>
+            <!-- Menu para telas grandes -->
+            <ul id="menu" class="hidden lg:flex space-x-6 text-sm">
               <li>
-                <a href="https://guilhermeruj.github.io/mrg/index.html#servicos" class="hover:rgba(2, 73, 89, 1)"
+                <a
+                  href="https://guilhermeruj.github.io/mrg/index.html#home"
+                  class="hover:text-blue-500"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://guilhermeruj.github.io/mrg/index.html#servicos"
+                  class="hover:text-blue-500"
                   >Serviços</a
                 >
               </li>
               <li>
-                <a href="https://guilhermeruj.github.io/mrg/index.html#quem-somos" class="hover:rgba(2, 73, 89, 1)"
+                <a
+                  href="https://guilhermeruj.github.io/mrg/index.html#quem-somos"
+                  class="hover:text-blue-500"
                   >Quem Somos</a
                 >
               </li>
               <li>
-                <a href="https://guilhermeruj.github.io/mrg/index.html#equipe" class="hover:rgba(2, 73, 89, 1)">Equipe</a>
+                <a
+                  href="https://guilhermeruj.github.io/mrg/index.html#equipe"
+                  class="hover:text-blue-500"
+                  >Equipe</a
+                >
               </li>
               <li>
-                <a href="https://guilhermeruj.github.io/mrg/index.html#portfolio" class="hover:rgba(2, 73, 89, 1)"
+                <a
+                  href="https://guilhermeruj.github.io/mrg/index.html#portfolio"
+                  class="hover:text-blue-500"
                   >Portfolio</a
                 >
               </li>
               <li>
-                <a href="https://guilhermeruj.github.io/mrg/contato.html" class="hover:rgba(2, 73, 89, 1)"
+                <a
+                  href="https://guilhermeruj.github.io/mrg/contato.html"
+                  class="hover:text-blue-500"
                   >Contato</a
                 >
               </li>
             </ul>
-          </div>
-        </nav>
-      </div>
-    </header>
 
-    <!-- Banner -->
-    <!-- Banner -->
-    <div id="app">
+            <!-- Menu de hambúrguer, visível em telas pequenas -->
+            <div
+              id="mobile-menu"
+              class="absolute z-50 border right-5 lg:hidden hidden rounded bg-white shadow-md flex-col items-center"
+            >
+              <ul class="p-4 space-y-4">
+                <li>
+                  <a
+                    href="https://guilhermeruj.github.io/mrg/index.html#home"
+                    class="hover:rgba(2, 73, 89, 1)"
+                    >Home</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://guilhermeruj.github.io/mrg/index.html#servicos"
+                    class="hover:rgba(2, 73, 89, 1)"
+                    >Serviços</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://guilhermeruj.github.io/mrg/index.html#quem-somos"
+                    class="hover:rgba(2, 73, 89, 1)"
+                    >Quem Somos</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://guilhermeruj.github.io/mrg/index.html#equipe"
+                    class="hover:rgba(2, 73, 89, 1)"
+                    >Equipe</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://guilhermeruj.github.io/mrg/index.html#portfolio"
+                    class="hover:rgba(2, 73, 89, 1)"
+                    >Portfolio</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://guilhermeruj.github.io/mrg/contato.html"
+                    class="hover:rgba(2, 73, 89, 1)"
+                    >Contato</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </header>
+
+      <!-- Banner -->
+      <!-- Banner -->
+
       <section id="home" class="mx-auto w-auto h-[750px] carousel">
         <div
           class="slides"
@@ -115,7 +169,7 @@
               :alt="image.alt"
               class="w-full h-full object-cover"
             />
-            <div class="absolute inset-0 "></div>
+            <div class="absolute inset-0"></div>
             <div
               class="absolute inset-0 flex items-center justify-center text-center bg-opacity-50"
             >
@@ -132,25 +186,36 @@
           <button class="control-btn" @click="nextSlide">→</button>
         </div>
       </section>
-    </div>
 
-    <section class="mb-32">
-        <div class="bg-mrg-blue text-white py-12 relative flex items-center justify-center">
+      <section class="mb-32">
+        <div
+          class="bg-mrg-blue text-white py-12 relative flex items-center justify-center"
+        >
           <!-- Container com posicionamento absoluto em telas maiores -->
-          <div class="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 text-center md:absolute md:mt-28 z-10">
-            <div class="bg-red text-white rounded h-28 flex justify-center items-center flex-col shadow-lg">
+          <div
+            class="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 text-center md:absolute md:mt-28 z-10"
+          >
+            <div
+              class="bg-red text-white rounded h-28 flex justify-center items-center flex-col shadow-lg"
+            >
               <h3 class="text-3xl font-bold">+100</h3>
               <p>Clientes Atendidos</p>
             </div>
-            <div class="bg-red text-white rounded h-28 flex justify-center items-center flex-col shadow-lg">
+            <div
+              class="bg-red text-white rounded h-28 flex justify-center items-center flex-col shadow-lg"
+            >
               <h3 class="text-3xl font-bold">+20</h3>
               <p>Prédios Entregues</p>
             </div>
-            <div class="bg-red text-white rounded h-28 flex justify-center items-center flex-col shadow-lg">
+            <div
+              class="bg-red text-white rounded h-28 flex justify-center items-center flex-col shadow-lg"
+            >
               <h3 class="text-3xl font-bold">+50km²</h3>
               <p>Área de Abrangência</p>
             </div>
-            <div class="bg-red text-white rounded h-28 flex justify-center items-center flex-col shadow-lg">
+            <div
+              class="bg-red text-white rounded h-28 flex justify-center items-center flex-col shadow-lg"
+            >
               <h3 class="text-3xl font-bold">+90%</h3>
               <p>Clientes Satisfeitos</p>
             </div>
@@ -158,108 +223,121 @@
         </div>
       </section>
 
-    <section id="portfolio" class="container mx-auto my-12 p-6">
-      <h1 class="text-4xl pt-4 font-bold text-t-blue text-center mb-2">
-        Portfólio
-      </h1>
-      <div class="bg-mrg-blue w-24 h-1 bg-t-blue mx-auto mb-8"></div>
-
-      <div class="grid md:grid-cols-2 gap-8">
-        <div>
-          <h2 class="text-xl text-t-blue font-bold">Via Tropical</h2>
-          <p class="text-gray-600 mt-2">
-            Nossa equipe altamente capacitada está pronta para transformar o seu
-            edifício, proporcionando uma nova vida à fachada, valorizando o
-            patrimônio e garantindo mais segurança e conforto para todos os
-            moradores e frequentadores. <br />
-            Com anos de experiência no mercado, combinamos qualidade,
-            profissionalismo e dedicação em cada projeto, entregando resultados
-            que superam expectativas. Oferecemos soluções personalizadas,
-            adequadas às necessidades específicas de cada cliente, utilizando
-            técnicas modernas e materiais de alta qualidade para garantir
-            durabilidade e eficiência. Confie na MRG Engenharia para realizar as
-            melhorias que seu imóvel precisa. Entre em contato hoje mesmo e
-            solicite seu orçamento. Vamos juntos construir um futuro melhor para
-            o seu edifício!
-          </p>
-          <img
-            src="https://guilhermeruj.github.io/mrg/assets/via-tropical.jpg"
-            alt="Residencial X"
-            class="mt-4 w-full"
-          />
-        </div>
-        <div>
-          <img src="https://guilhermeruj.github.io/mrg/assets/Alpinismo.jpg" alt="Residencial Y" class="w-full" />
-          <h2 class="text-xl text-t-blue font-bold mt-4">
-            Alpinismo Industrial
-          </h2>
-          <p class="text-gray-600 mt-2">
-            Alpinismo Industrial conhecido por rappel ou acesso por corda é uma
-            tecnologia de execução de trabalhos em altura em obras de construção
-            civil, permitindo aos trabalhadores alcançar locais de difícil
-            acesso, sem o recurso a estruturas de apoio e onde estruturas como
-            andaimes, plataformas elevatórias ou bailéus têm o acesso muito
-            limitado. É um método alternativo para a inspecção, manutenção e
-            reparação de fachadas de edifícios e outras estruturas industriais e
-            residenciais.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Nossa História -->
-    <section class="bg-white -mb-12 p-8">
-      <h1 class="text-4xl pt-4 font-bold text-t-blue text-center mb-2">
-        Quem Somos
-      </h1>
-      <div class="bg-mrg-blue w-24 h-1 bg-t-blue mx-auto mb-8"></div>
-      <div
-        id="quem-somos"
-        class="container mx-auto my-12 p-6 flex flex-wrap md:flex-nowrap bg-white"
-      >
-        <div class="w-full md:w-1/2">
-          <h2 class="text-2xl font-bold mb-4">Nossa História</h2>
-          <p>
-A MRG é uma empresa especializada no segmento de construção, reforma e manutenção de edificações residenciais, comerciais e industriais. Atuamos com competência, profissionalismo e certificação comprovada, sendo reconhecidos pelo compromisso com a excelência em nossos serviços.
-Contamos com equipes formadas por profissionais experientes e capacitados, que aliam conhecimento técnico à aplicação das mais modernas tecnologias e soluções da engenharia. Nosso objetivo é garantir eficiência máxima na execução dos projetos, respeitando rigorosamente as normas técnicas e regulamentares da construção civil.
-Cada projeto é realizado com foco em metas e prazos bem definidos, assegurando qualidade, segurança e satisfação aos nossos clientes. A MRG está empenhada em oferecer serviços que agreguem valor, aumentem a durabilidade e preservem a integridade estrutural de cada obra, sempre mantendo o mais alto padrão de qualidade.
-Escolha a MRG e transforme suas necessidades em soluções completas, com resultados que superam as expectativas.
-          </p>
-        </div>
-        <div class="w-full md:w-1/2">
-          <img
-            src="https://guilhermeruj.github.io/mrg/assets/about.png"
-            alt="Imagem sobre a história"
-            class="w-full h-auto"
-          />
-        </div>
-      </div>
-    </section>
-    <!-- Equipe -->
-    <section class="bg-mrg-blue text-white py-6">
-      <div
-        id="equipe"
-        class="bg-mrg-blue container mx-auto my-6 text-white p-6 text-center"
-      >
-      <h1 class="text-4xl font-bold text-center mb-6">
-          Nossa Equipe
+      <section id="portfolio" class="container mx-auto my-12 p-6">
+        <h1 class="text-4xl pt-4 font-bold text-t-blue text-center mb-2">
+          Portfólio
         </h1>
-        <div class="bg-mrg-blue w-24 h-1 bg-white mx-auto mb-8 mb-12"></div>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-          <!-- Membros da equipe com fotos -->
+        <div class="bg-mrg-blue w-24 h-1 bg-t-blue mx-auto mb-8"></div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+          <div>
+            <h2 class="text-xl text-t-blue font-bold">Via Tropical</h2>
+            <p class="text-gray-600 mt-2">
+              Nossa equipe altamente capacitada está pronta para transformar o
+              seu edifício, proporcionando uma nova vida à fachada, valorizando
+              o patrimônio e garantindo mais segurança e conforto para todos os
+              moradores e frequentadores. <br />
+              Com anos de experiência no mercado, combinamos qualidade,
+              profissionalismo e dedicação em cada projeto, entregando
+              resultados que superam expectativas. Oferecemos soluções
+              personalizadas, adequadas às necessidades específicas de cada
+              cliente, utilizando técnicas modernas e materiais de alta
+              qualidade para garantir durabilidade e eficiência. Confie na MRG
+              Engenharia para realizar as melhorias que seu imóvel precisa.
+              Entre em contato hoje mesmo e solicite seu orçamento. Vamos juntos
+              construir um futuro melhor para o seu edifício!
+            </p>
+            <img
+              src="https://guilhermeruj.github.io/mrg/assets/via-tropical.jpg"
+              alt="Residencial X"
+              class="mt-4 w-full"
+            />
+          </div>
           <div>
             <img
-              src="https://guilhermeruj.github.io/mrg/assets/equipe/Gabriela.png"
-              alt="Membro 1"
-              class="w-32 h-32 mx-auto rounded-full"
+              src="https://guilhermeruj.github.io/mrg/assets/Alpinismo.jpg"
+              alt="Residencial Y"
+              class="w-full"
             />
-            <p class="text-xl mb-2 font-bold mt-2">Gabriela</p>
-            <p class="text-sm">
-                Engenheira Civil
+            <h2 class="text-xl text-t-blue font-bold mt-4">
+              Alpinismo Industrial
+            </h2>
+            <p class="text-gray-600 mt-2">
+              Alpinismo Industrial conhecido por rappel ou acesso por corda é
+              uma tecnologia de execução de trabalhos em altura em obras de
+              construção civil, permitindo aos trabalhadores alcançar locais de
+              difícil acesso, sem o recurso a estruturas de apoio e onde
+              estruturas como andaimes, plataformas elevatórias ou bailéus têm o
+              acesso muito limitado. É um método alternativo para a inspecção,
+              manutenção e reparação de fachadas de edifícios e outras
+              estruturas industriais e residenciais.
             </p>
           </div>
-          
-          <!-- <div>
+        </div>
+      </section>
+
+      <!-- Nossa História -->
+      <section class="bg-white -mb-12 p-8">
+        <h1 class="text-4xl pt-4 font-bold text-t-blue text-center mb-2">
+          Quem Somos
+        </h1>
+        <div class="bg-mrg-blue w-24 h-1 bg-t-blue mx-auto mb-8"></div>
+        <div
+          id="quem-somos"
+          class="container mx-auto my-12 p-6 flex flex-wrap md:flex-nowrap bg-white"
+        >
+          <div class="w-full md:w-1/2">
+            <h2 class="text-2xl font-bold mb-4">Nossa História</h2>
+            <p>
+              A MRG é uma empresa especializada no segmento de construção,
+              reforma e manutenção de edificações residenciais, comerciais e
+              industriais. Atuamos com competência, profissionalismo e
+              certificação comprovada, sendo reconhecidos pelo compromisso com a
+              excelência em nossos serviços. Contamos com equipes formadas por
+              profissionais experientes e capacitados, que aliam conhecimento
+              técnico à aplicação das mais modernas tecnologias e soluções da
+              engenharia. Nosso objetivo é garantir eficiência máxima na
+              execução dos projetos, respeitando rigorosamente as normas
+              técnicas e regulamentares da construção civil. Cada projeto é
+              realizado com foco em metas e prazos bem definidos, assegurando
+              qualidade, segurança e satisfação aos nossos clientes. A MRG está
+              empenhada em oferecer serviços que agreguem valor, aumentem a
+              durabilidade e preservem a integridade estrutural de cada obra,
+              sempre mantendo o mais alto padrão de qualidade. Escolha a MRG e
+              transforme suas necessidades em soluções completas, com resultados
+              que superam as expectativas.
+            </p>
+          </div>
+          <div class="w-full md:w-1/2">
+            <img
+              src="https://guilhermeruj.github.io/mrg/assets/about.png"
+              alt="Imagem sobre a história"
+              class="w-full h-auto"
+            />
+          </div>
+        </div>
+      </section>
+      <!-- Equipe -->
+      <section class="bg-mrg-blue text-white py-6">
+        <div
+          id="equipe"
+          class="bg-mrg-blue container mx-auto my-6 text-white p-6 text-center"
+        >
+          <h1 class="text-4xl font-bold text-center mb-6">Nossa Equipe</h1>
+          <div class="bg-mrg-blue w-24 h-1 bg-white mx-auto mb-8 mb-12"></div>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <!-- Membros da equipe com fotos -->
+            <div>
+              <img
+                src="https://guilhermeruj.github.io/mrg/assets/equipe/Gabriela.png"
+                alt="Membro 1"
+                class="w-32 h-32 mx-auto rounded-full"
+              />
+              <p class="text-xl mb-2 font-bold mt-2">Gabriela</p>
+              <p class="text-sm">Engenheira Civil</p>
+            </div>
+
+            <!-- <div>
             <img
               src="/assets/Gabriela.png"
               alt="Membro 3"
@@ -271,7 +349,7 @@ Escolha a MRG e transforme suas necessidades em soluções completas, com result
               vulputate consequat diam, vel rutrum nulla interdum et.
             </p>
           </div> -->
-          <!-- <div>
+            <!-- <div>
             <img
               src="/assets/Gabriela.png"
               alt="Membro 4"
@@ -283,40 +361,34 @@ Escolha a MRG e transforme suas necessidades em soluções completas, com result
               vulputate consequat diam, vel rutrum nulla interdum et.
             </p>
           </div>-->
-          <div>
-            <img
-              src="https://guilhermeruj.github.io/mrg/assets/equipe/RAFAEL-TAVARES.png"
-              alt="Membro 5"
-              class="w-32 h-32 mx-auto rounded-full"
-            />
-            <p class="text-xl mb-2 font-bold mt-2">Rafael Tavares</p>
-            <p class="text-sm">
-              Engenheiro Civil
-            </p>
-          </div> 
-          <div>
-            <img
-              src="https://guilhermeruj.github.io/mrg/assets/equipe/Rebeca-Oliveira.png"
-              alt="Membro 6"
-              class="w-32 h-32 mx-auto rounded-full"
-            />
-            <p class="text-xl mb-2 font-bold mt-2">Rebeca Oliveira </p>
-            <p class="text-sm">
-                Auxiliar de Engenharia
-            </p>
-          </div>
-          <div>
-            <img
-              src="https://guilhermeruj.github.io/mrg/assets/equipe//Karoline-Costa.png"
-              alt="Membro 2"
-              class="w-32 h-32 mx-auto rounded-full"
-            />
-            <p class="text-xl mb-2 font-bold mt-2">Karoline Costa Ramalho</p>
-            <p class="text-sm">
-                Estagiária
-            </p>
-          </div>
-          <!-- <div>
+            <div>
+              <img
+                src="https://guilhermeruj.github.io/mrg/assets/equipe/RAFAEL-TAVARES.png"
+                alt="Membro 5"
+                class="w-32 h-32 mx-auto rounded-full"
+              />
+              <p class="text-xl mb-2 font-bold mt-2">Rafael Tavares</p>
+              <p class="text-sm">Engenheiro Civil</p>
+            </div>
+            <div>
+              <img
+                src="https://guilhermeruj.github.io/mrg/assets/equipe/Rebeca-Oliveira.png"
+                alt="Membro 6"
+                class="w-32 h-32 mx-auto rounded-full"
+              />
+              <p class="text-xl mb-2 font-bold mt-2">Rebeca Oliveira</p>
+              <p class="text-sm">Auxiliar de Engenharia</p>
+            </div>
+            <div>
+              <img
+                src="https://guilhermeruj.github.io/mrg/assets/equipe//Karoline-Costa.png"
+                alt="Membro 2"
+                class="w-32 h-32 mx-auto rounded-full"
+              />
+              <p class="text-xl mb-2 font-bold mt-2">Karoline Costa Ramalho</p>
+              <p class="text-sm">Estagiária</p>
+            </div>
+            <!-- <div>
             <img
               src="/assets/Gabriela.png"
               alt="Membro 7"
@@ -328,7 +400,7 @@ Escolha a MRG e transforme suas necessidades em soluções completas, com result
               vulputate consequat diam, vel rutrum nulla interdum et.
             </p>
           </div> -->
-          <!-- <div>
+            <!-- <div>
             <img
               src="/assets/Gabriela.png"
               alt="Membro 8"
@@ -340,100 +412,46 @@ Escolha a MRG e transforme suas necessidades em soluções completas, com result
               vulputate consequat diam, vel rutrum nulla interdum et.
             </p>
           </div> -->
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="bg-gray-50 py-12" id="servicos">
-      <div class="container mx-auto text-center">
-        <h1 class="text-4xl font-bold text-center mb-2">Nossos Serviços</h2>
-            <div class="bg-mrg-blue w-24 h-1 bg-t-blue mx-auto mb-8"></div>
-        <div class="grid grid-cols-2 mx-auto md:grid-cols-5 gap-6">
-          <!-- Card de Serviço 1 -->
-          <div class="relative p-4 text-center">
-            <img
-              src="https://fakeimg.pl/400x450"
-              alt="Serviço 3"
-              class="w-450 h-400 mx-auto opacity-60"
-            />
+      <section class="bg-gray-50 py-12" id="servicos">
+        <div class="container mx-auto text-center">
+          <h1 class="text-4xl font-bold text-center mb-2">Nossos Serviços</h1>
+          <div class="bg-mrg-blue w-24 h-1 bg-t-blue mx-auto mb-8"></div>
+          <div class="grid grid-cols-2 mx-auto md:grid-cols-5 gap-6">
             <div
-              class="absolute inset-0 flex flex-col justify-center items-center"
+              v-for="(service, index) in services"
+              :key="index"
+              class="relative p-4 text-center"
             >
-              <h3 class="text-lg font-semibold text-white">Serviço 1</h3>
-              <p class="text-sm text-gray-200">Descrição do serviço.</p>
+              <img
+                :src="service.src"
+                :alt="service.alt"
+                class="cursor-pointer w-550 h-400 mx-auto"
+                @click="openModal(service.src)"
+              />
             </div>
           </div>
-
-          <!-- Card de Serviço 2 -->
-          <div class="relative p-4 text-center">
-            <img
-              src="https://fakeimg.pl/400x450"
-              alt="Serviço 3"
-              class="w-450 h-400 mx-auto opacity-60"
-            />
-            <div
-              class="absolute inset-0 flex flex-col justify-center items-center"
-            >
-              <h3 class="text-lg font-semibold text-white">Serviço 2</h3>
-              <p class="text-sm text-gray-200">Descrição do serviço.</p>
-            </div>
-          </div>
-
-          <!-- Repita para os 10 serviços -->
-          <!-- Serviço 3 -->
-          <div class="relative p-4 text-center">
-            <img
-              src="https://fakeimg.pl/400x450"
-              alt="Serviço 3"
-              class="w-450 h-400 mx-auto opacity-60"
-            />
-            <div
-              class="absolute inset-0 flex flex-col justify-center items-center"
-            >
-              <h3 class="text-lg font-semibold text-white">Serviço 3</h3>
-              <p class="text-sm text-gray-200">Descrição do serviço.</p>
-            </div>
-          </div>
-          <div class="relative p-4 text-center">
-            <img
-              src="https://fakeimg.pl/400x450"
-              alt="Serviço 3"
-              class="w-450 h-400 mx-auto opacity-60"
-            />
-            <div
-              class="absolute inset-0 flex flex-col justify-center items-center"
-            >
-              <h3 class="text-lg font-semibold text-white">Serviço 3</h3>
-              <p class="text-sm text-gray-200">Descrição do serviço.</p>
-            </div>
-          </div>
-          <div class="relative p-4 text-center">
-            <img
-              src="https://fakeimg.pl/400x450"
-              alt="Serviço 3"
-              class="w-450 h-400 mx-auto opacity-60"
-            />
-            <div
-              class="absolute inset-0 flex flex-col justify-center items-center"
-            >
-              <h3 class="text-lg font-semibold text-white">Serviço 3</h3>
-              <p class="text-sm text-gray-200">Descrição do serviço.</p>
-            </div>
-          </div>
-
-          <!-- Continue para os demais serviços -->
         </div>
-      </div>
-    </section>
 
-    <section class="bg-mrg-blue text-white py-6">
+        <!-- Modal para ampliar a imagem -->
+        <div
+          v-if="isModalOpen"
+          class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-70 z-50"
+          @click="closeModal"
+        >
+          <img :src="currentImage" class="max-w-full max-h-full" @click.stop />
+        </div>
+      </section>
+
+      <section class="bg-mrg-blue text-white py-6">
         <div
           id="equipe"
           class="bg-mrg-blue container mx-auto my-6 text-white p-6 text-center"
         >
-        <h1 class="text-4xl font-bold text-center mb-6">
-            Nossas Empresas
-          </h1>
+          <h1 class="text-4xl font-bold text-center mb-6">Nossas Empresas</h1>
           <div class="bg-mrg-blue w-24 h-1 bg-white mx-auto mb-8 mb-12"></div>
           <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
             <!-- Membros da equipe com fotos -->
@@ -454,44 +472,45 @@ Escolha a MRG e transforme suas necessidades em soluções completas, com result
               <p class="text-xl mb-2 font-bold mt-2">MRG - ENGENHARIA</p>
             </div> -->
             <div>
-                <img
-                   src="https://guilhermeruj.github.io/mrg/assets/company/4.png"
-                  alt="Membro 6"
-                  class="w-32 h-32 mx-auto rounded-full"  
-                />
-                <p class="text-xl mb-2 font-bold mt-2">GRUPO MRG </p>
-              </div>
-              <div>
-                <img
-                   src="https://guilhermeruj.github.io/mrg/assets/company/3.png"
-                  alt="Membro 5"
-                  class="w-32 h-32 mx-auto rounded-full"
-                />
-                <p class="text-xl mb-2 font-bold mt-2">MRG - CONSTRUTORA</p>
-              </div>
+              <img
+                src="https://guilhermeruj.github.io/mrg/assets/company/4.png"
+                alt="Membro 6"
+                class="w-32 h-32 mx-auto rounded-full"
+              />
+              <p class="text-xl mb-2 font-bold mt-2">GRUPO MRG</p>
+            </div>
+            <div>
+              <img
+                src="https://guilhermeruj.github.io/mrg/assets/company/3.png"
+                alt="Membro 5"
+                class="w-32 h-32 mx-auto rounded-full"
+              />
+              <p class="text-xl mb-2 font-bold mt-2">MRG - CONSTRUTORA</p>
+            </div>
             <div>
               <img
                 src="https://guilhermeruj.github.io/mrg/assets/company/1.png"
                 alt="Membro 3"
                 class="w-32 h-32 mx-auto rounded-full"
-              /><p class="text-xl mb-2 font-bold mt-2">MRG - ENGENHARIA</p>
+              />
+              <p class="text-xl mb-2 font-bold mt-2">MRG - ENGENHARIA</p>
             </div>
             <div>
               <img
-                 src="https://guilhermeruj.github.io/mrg/assets/company/2.png"
+                src="https://guilhermeruj.github.io/mrg/assets/company/2.png"
                 alt="Membro 4"
                 class="w-32 h-32 mx-auto rounded-full"
-              /><p class="text-xl mb-2 font-bold mt-2"> CRISTALIZE </p>
+              />
+              <p class="text-xl mb-2 font-bold mt-2">CRISTALIZE</p>
             </div>
-           
-            
+
             <div>
               <img
-                 src="https://guilhermeruj.github.io/mrg/assets/company/5.png"
+                src="https://guilhermeruj.github.io/mrg/assets/company/5.png"
                 alt="Membro 7"
                 class="w-32 h-32 mx-auto rounded-full"
               />
-              <p class="text-xl mb-2 font-bold mt-2">MRG - COMERCIO </p>
+              <p class="text-xl mb-2 font-bold mt-2">MRG - COMERCIO</p>
             </div>
             <!-- <div>
               <img
@@ -505,55 +524,63 @@ Escolha a MRG e transforme suas necessidades em soluções completas, com result
         </div>
       </section>
 
-    <section id="instagram" class="bg-gray-100 py-12">
-      <div class="container mx-auto">
-        <h1 class="text-4xl font-bold text-center mb-6">Instagram</h1>
-        <div class="bg-mrg-blue w-24 h-1 bg-t-blue mx-auto mb-8"></div>
+      <section id="instagram" class="bg-gray-100 py-12">
+        <div class="container mx-auto">
+          <h1 class="text-4xl font-bold text-center mb-6">Instagram</h1>
+          <div class="bg-mrg-blue w-24 h-1 bg-t-blue mx-auto mb-8"></div>
 
-        <!-- Container para exibir o feed do Instagram -->
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-          <!-- Post 1 -->
-          <div>
-            <iframe
-              src="https://www.instagram.com/p/DAa_3sMxlLr/embed"
-              class="w-full h-96 border-none rounded-md"
-              allowfullscreen
-            ></iframe>
-          </div>
-          <!-- Post 2 -->
-          <div>
-            <iframe
-              src="https://www.instagram.com/p/DAtw66PRpMF/embed"
-              class="w-full h-96 border-none rounded-md"
-              allowfullscreen
-            ></iframe>
-          </div>
-          <!-- Post 3 -->
-          <div>
-            <iframe
-              src="https://www.instagram.com/p/C_3WUoBRbQa/embed"
-              class="w-full h-96 border-none rounded-md"
-              allowfullscreen
-            ></iframe>
-          </div>
-          <!-- Post 4 -->
-          <div>
-            <iframe
-              src="https://www.instagram.com/p/DBj4fNIxg3k/embed"
-              class="w-full h-96 border-none rounded-md"
-              allowfullscreen
-            ></iframe>
+          <!-- Container para exibir o feed do Instagram -->
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <!-- Post 1 -->
+            <div>
+              <iframe
+                src="https://www.instagram.com/p/DAa_3sMxlLr/embed"
+                class="w-full h-96 border-none rounded-md"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <!-- Post 2 -->
+            <div>
+              <iframe
+                src="https://www.instagram.com/p/DAtw66PRpMF/embed"
+                class="w-full h-96 border-none rounded-md"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <!-- Post 3 -->
+            <div>
+              <iframe
+                src="https://www.instagram.com/p/C_3WUoBRbQa/embed"
+                class="w-full h-96 border-none rounded-md"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <!-- Post 4 -->
+            <div>
+              <iframe
+                src="https://www.instagram.com/p/DBj4fNIxg3k/embed"
+                class="w-full h-96 border-none rounded-md"
+                allowfullscreen
+              ></iframe>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-    <a href="https://wa.me/5599999999999" target="_blank" id="whatsapp-button">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-    </a>
-    <!-- Rodapé -->
-    <footer class="bg-gray-800 text-white p-6 text-center">
-      <p>© 2024 MRG Construtora. Todos os direitos reservados.</p>
-    </footer>
+      </section>
+      <a
+        href="https://wa.me/5599999999999"
+        target="_blank"
+        id="whatsapp-button"
+      >
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+          alt="WhatsApp"
+        />
+      </a>
+      <!-- Rodapé -->
+      <footer class="bg-gray-800 text-white p-6 text-center">
+        <p>© 2024 MRG Construtora. Todos os direitos reservados.</p>
+      </footer>
+    </div>
     <script src="https://guilhermeruj.github.io/mrg/js/app.js"></script>
   </body>
   <script>
