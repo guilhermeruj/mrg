@@ -6,6 +6,10 @@
   background-color: rgba(0, 57, 79, 1);
 }
 
+.bg-mrg-blue2 {
+  background-color: rgba(3, 60, 81, 1);
+}
+
 .carousel {
   position: relative;
   overflow: hidden;
