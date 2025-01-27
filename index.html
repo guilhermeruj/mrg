@@ -13,22 +13,22 @@
       href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
       rel="stylesheet"
     />
+
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet"
+    />
   </head>
   <body class="font-sans antialiased bg-gray-200 text-gray-900">
     <div id="app">
-      <!-- Menu Superior -->
       <header class="bg-white shadow-md">
         <div class="container mx-auto flex justify-between items-center p-4">
-          <!-- Logo -->
           <img
             src="https://guilhermeruj.github.io/mrg/assets/logo.png"
             alt="Logo da Construtora"
             class="h-8"
           />
-
-          <!-- Menu de Navegação -->
           <nav>
-            <!-- Menu de hambúrguer visível em telas pequenas -->
             <div class="block lg:hidden">
               <button
                 id="menu-toggle"
@@ -51,7 +51,6 @@
               </button>
             </div>
 
-            <!-- Menu para telas grandes -->
             <ul id="menu" class="hidden lg:flex space-x-6 text-sm">
               <li>
                 <a
@@ -97,7 +96,6 @@
               </li>
             </ul>
 
-            <!-- Menu de hambúrguer, visível em telas pequenas -->
             <div
               id="mobile-menu"
               class="absolute z-50 border right-5 lg:hidden hidden rounded bg-white shadow-md flex-col items-center"
@@ -151,9 +149,6 @@
         </div>
       </header>
 
-      <!-- Banner -->
-      <!-- Banner -->
-
       <section id="home" class="mx-auto w-auto h-[750px] carousel">
         <div
           class="slides"
@@ -191,7 +186,6 @@
         <div
           class="bg-mrg-blue text-white py-12 relative flex items-center justify-center"
         >
-          <!-- Container com posicionamento absoluto em telas maiores -->
           <div
             class="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 text-center md:absolute md:mt-28 z-10"
           >
@@ -276,7 +270,6 @@
         </div>
       </section>
 
-      <!-- Nossa História -->
       <section class="bg-white -mb-12 p-8">
         <h1 class="text-4xl pt-4 font-bold text-t-blue text-center">
           Quem Somos
@@ -319,16 +312,15 @@
           </div>
         </div>
       </section>
-      <!-- Equipe -->
-      <section class="bg-mrg-blue text-white py-6">
+      <!--  -->
+      <section class="bg-mrg-blue2 text-white py-6">
         <div
           id="equipe"
-          class="bg-mrg-blue2 container mx-auto my-6 text-white p-6 text-center"
+          class="container mx-auto my-6 text-white p-6 text-center"
         >
           <h1 class="text-4xl font-bold text-center mb-6">Nossa Equipe</h1>
-          <div class="bg-mrg-blue w-24 h-1 bg-white mx-auto mb-8 mb-12"></div>
+          <div class=" w-24 h-1 bg-white mx-auto mb-8 mb-12"></div>
           <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-            <!-- Membros da equipe com fotos -->
             <div>
               <img
                 src="https://guilhermeruj.github.io/mrg/assets/equipe/Gabriela.png"
@@ -406,8 +398,6 @@
             </div>
           </div>
         </div>
-
-        <!-- Modal para ampliar a imagem -->
         <div
           v-if="isModalOpen"
           class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-70 z-50"
@@ -425,31 +415,6 @@
           <h1 class="text-4xl font-bold text-center mb-6">Nosso Grupo</h1>
           <div class="bg-mrg-blue w-24 h-1 bg-white mx-auto mb-8 mb-12"></div>
           <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-            <!-- Membros da equipe com fotos -->
-            <!-- <div>
-              <img
-                src="/assets/logoempresa.png"
-                alt="Membro 1"
-                class="w-32 h-32 mx-auto rounded-full"
-              />
-              <p class="text-xl mb-2 font-bold mt-2">MRG - ENGENHARIA</p>
-            </div>
-            <div>
-              <img
-                src="/assets/logoempresa.png"
-                alt="Membro 2"
-                class="w-32 h-32 mx-auto rounded-full"
-              />
-              <p class="text-xl mb-2 font-bold mt-2">MRG - ENGENHARIA</p>
-            </div> -->
-            <!-- <div>
-              <img
-                src="https://guilhermeruj.github.io/mrg/assets/company/4.png"
-                alt="Membro 6"
-                class="w-32 h-32 mx-auto rounded-full"
-              />
-              <p class="text-xl mb-2 font-bold mt-2">GRUPO MRG</p>
-            </div> -->
             <div>
               <img
                 src="https://guilhermeruj.github.io/mrg/assets/company/3.png"
@@ -483,14 +448,6 @@
               />
               <p class="text-xl mb-2 font-bold mt-2">MRG - COMERCIO</p>
             </div>
-            <!-- <div>
-              <img
-                 src="/assets/company/1.png"
-                alt="Membro 8"
-                class="w-32 h-32 mx-auto rounded-full"
-              />
-              <p class="text-xl mb-2 font-bold mt-2">MRG - ENGENHARIA</p>
-            </div> -->
           </div>
         </div>
       </section>
@@ -500,9 +457,7 @@
           <h1 class="text-4xl font-bold text-center mb-6">Instagram</h1>
           <div class="bg-mrg-blue w-24 h-1 bg-t-blue mx-auto mb-8"></div>
 
-          <!-- Container para exibir o feed do Instagram -->
           <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-            <!-- Post 1 -->
             <div>
               <iframe
                 src="https://www.instagram.com/p/DAa_3sMxlLr/embed"
@@ -510,7 +465,6 @@
                 allowfullscreen
               ></iframe>
             </div>
-            <!-- Post 2 -->
             <div>
               <iframe
                 src="https://www.instagram.com/p/DAtw66PRpMF/embed"
@@ -518,7 +472,6 @@
                 allowfullscreen
               ></iframe>
             </div>
-            <!-- Post 3 -->
             <div>
               <iframe
                 src="https://www.instagram.com/p/C_3WUoBRbQa/embed"
@@ -526,7 +479,6 @@
                 allowfullscreen
               ></iframe>
             </div>
-            <!-- Post 4 -->
             <div>
               <iframe
                 src="https://www.instagram.com/p/DAEX4OaR1aV/embed"
@@ -536,7 +488,45 @@
             </div>
           </div>
         </div>
-      </section>
+
+        <section class="bg-gray-50 mt-6 flex justify-center items-center h-40">
+            <div class="w-5/6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 p-6">
+              <!-- Fale agora com a gente -->
+              <div class="flex flex-row items-center justify-center text-center space-x-4">
+                <!-- <i class="fas fa-comment-dots text-3xl text-gray-600"></i> -->
+                <span class="text-2xl font-semibold text-gray-800">Fale agora com a gente</span>
+              </div>
+          
+              <!-- Telefone -->
+              <div class="flex flex-row items-center justify-center text-center space-x-4">
+                <i class="fas fa-phone-alt text-3xl text-gray-600"></i>
+                <span class="text-xl text-gray-800">Telefone</span>
+                <div class="text-lg text-gray-600">61 99999999</div>
+              </div>
+          
+              <!-- Email -->
+              <div class="flex flex-row items-center justify-center text-center space-x-4">
+                <i class="fas fa-envelope text-3xl text-gray-600"></i>
+                <span class="text-xl text-gray-800">Email</span>
+                <div class="text-lg text-gray-600">exemplo@email.com</div>
+              </div>
+          
+              <!-- WhatsApp -->
+              <div class="flex flex-row items-center justify-center text-center space-x-4">
+                <i class="fab fa-whatsapp text-3xl text-gray-600"></i>
+                <span class="text-xl text-gray-800">WhatsApp</span>
+                <div class="text-lg text-gray-600">Clique aqui</div>
+              </div>
+          
+              <!-- Instagram -->
+              <div class="flex flex-row items-center justify-center text-center space-x-4">
+                <i class="fab fa-instagram text-3xl text-gray-600"></i>
+                <span class="text-xl text-gray-800">Instagram</span>
+                <div class="text-lg text-gray-600">@empresaInstagram</div>
+              </div>
+            </div>
+          </section>
+
       <a
         href="https://wa.me/5599999999999"
         target="_blank"
@@ -547,22 +537,15 @@
           alt="WhatsApp"
         />
       </a>
-      <!-- Rodapé -->
       <footer class="bg-mrg-blue text-white p-8">
         <div class="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
-          <!-- Bloco 1: Logo e frase -->
           <div class="text-center md:text-left">
             <img
               src="https://guilhermeruj.github.io/mrg/assets/company/4.png"
               alt="Logo da Construtora"
               class="h-40 mx-auto md:mx-0"
             />
-            <!-- <p class="mt-4 text-gray-400">
-              Transformando espaços, construindo o futuro.
-            </p> -->
           </div>
-
-          <!-- Bloco 2: Serviços -->
           <div>
             <h3 class="font-bold text-lg mb-4">Serviços</h3>
             <ul class="space-y-2">
@@ -587,7 +570,6 @@
             </ul>
           </div>
 
-          <!-- Bloco 3: Obras em andamento -->
           <div>
             <h3 class="font-bold text-lg mb-4">Obras em andamento</h3>
             <ul class="space-y-2">
@@ -609,7 +591,6 @@
             </ul>
           </div>
 
-          <!-- Bloco 4: Redes sociais -->
           <div>
             <h3 class="font-bold text-lg mb-4">Redes sociais</h3>
             <ul class="flex justify-center md:justify-start space-x-4">
@@ -622,24 +603,6 @@
                   />
                 </a>
               </li>
-              <!-- <li>
-                <a href="#" class="hover:text-blue-400">
-                  <img
-                    src="https://cdn-icons-png.flaticon.com/512/733/733579.png"
-                    alt="Instagram"
-                    class="h-6"
-                  />
-                </a>
-              </li> -->
-              <!-- <li>
-                <a href="#" class="hover:text-blue-400">
-                  <img
-                    src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png"
-                    alt="LinkedIn"
-                    class="h-6"
-                  />
-                </a>
-              </li> -->
               <li>
                 <a href="#" class="hover:text-blue-400">
                   <img
