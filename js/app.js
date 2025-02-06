@@ -7,8 +7,14 @@ createApp({
       currentSlide: 0,
       images: [
         {
-          src: "https://guilhermeruj.github.io/mrg/assets/image2.png",
+          src: "https://guilhermeruj.github.io/mrg/assets/image7.png",
           alt: "Banner de arquitetura 1",
+          title: "",
+          caption: "",
+        },
+        {
+          src: "https://guilhermeruj.github.io/mrg/assets/image2.png",
+          alt: "Banner de arquitetura 2",
           title: "",
           caption: "",
         },
