@@ -149,7 +149,7 @@
         </div>
       </header>
 
-      <section id="home" class="mx-auto w-auto h-[750px] carousel">
+      <section id="home" class="mx-auto w-auto h-auto carousel">
         <div
           class="slides"
           :style="{ transform: `translateX(-${currentSlide * 100}%)` }"
@@ -157,7 +157,7 @@
           <div
             v-for="(image, index) in images"
             :key="index"
-            class="slide h-full flex items-center justify-center"
+            class="slide w-auto h-auto flex items-center justify-center"
           >
             <img
               :src="image.src"
@@ -458,78 +458,59 @@
           <div class="bg-mrg-blue w-24 h-1 bg-t-blue mx-auto mb-8"></div>
 
           <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-            <div>
-              <iframe
-                src="https://www.instagram.com/p/DAa_3sMxlLr/embed"
-                class="w-full h-96 border-none rounded-md"
-                allowfullscreen
-              ></iframe>
+            <div class="instagram-container">
+              <iframe src="https://www.instagram.com/p/DAa_3sMxlLr/embed" class="quadroInsta"></iframe>
             </div>
-            <div>
-              <iframe
-                src="https://www.instagram.com/p/DAtw66PRpMF/embed"
-                class="w-full h-96 border-none rounded-md"
-                allowfullscreen
-              ></iframe>
+            <div class="instagram-container">
+              <iframe src="https://www.instagram.com/p/DAtw66PRpMF/embed" class="quadroInsta"></iframe>
             </div>
-            <div>
-              <iframe
-                src="https://www.instagram.com/p/C_3WUoBRbQa/embed"
-                class="w-full h-96 border-none rounded-md"
-                allowfullscreen
-              ></iframe>
+            <div class="instagram-container">
+              <iframe src="https://www.instagram.com/p/C_3WUoBRbQa/embed" class="quadroInsta"></iframe>
             </div>
-            <div>
-              <iframe
-                src="https://www.instagram.com/p/DAEX4OaR1aV/embed"
-                class="w-full h-96 border-none rounded-md"
-                allowfullscreen
-              ></iframe>
+            <div class="instagram-container">
+              <iframe src="https://www.instagram.com/p/DAEX4OaR1aV/embed" class="quadroInsta"></iframe>
             </div>
           </div>
         </div>
 
-        <section class="bg-gray-50 mt-6 flex justify-center items-center h-40">
-            <div class="w-5/6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 p-6">
+        <section class="bg-gray-50 mt-6 flex justify-center items-center py-10">
+            <div class="w-5/6 grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 p-6">
               <!-- Fale agora com a gente -->
-              <div class="flex flex-row items-center justify-center text-center space-x-4">
-                <!-- <i class="fas fa-comment-dots text-3xl text-gray-600"></i> -->
-                <span class="text-2xl font-semibold text-gray-800">Fale a nossa equipe</span>
+              <div class="flex flex-col items-center text-center space-y-2">
+                <span class="text-2xl font-semibold text-gray-800">Fale com nossa equipe</span>
               </div>
           
               <!-- Telefone -->
-              <div class="flex flex-row items-center justify-center text-center space-x-4">
+              <div class="flex flex-col items-center text-center space-y-2">
                 <i class="fas fa-phone-alt text-3xl text-gray-600"></i>
                 <span class="text-xl text-gray-800">Telefone</span>
                 <div class="text-lg text-gray-600">61 3573-7288</div>
               </div>
           
               <!-- Email -->
-              <div class="flex flex-row items-center justify-center text-center space-x-4">
+              <div class="flex flex-col items-center text-center space-y-2">
                 <i class="fas fa-envelope text-3xl text-gray-600"></i>
                 <span class="text-xl text-gray-800">Email</span>
                 <div class="text-lg text-gray-600">contato@mrgengenharia.com.br</div>
               </div>
           
               <!-- WhatsApp -->
-              <div class="flex flex-row items-center justify-center text-center space-x-4">
+              <div class="flex flex-col items-center text-center space-y-2">
                 <i class="fab fa-whatsapp text-3xl text-gray-600"></i>
                 <span class="text-xl text-gray-800">WhatsApp</span>
-                <div class="text-lg text-gray-600"> <a
-                    href="https://wa.me/5599999999999"
-                    target="_blank"
-                  >Clique aqui</a></div>
+                <div class="text-lg text-gray-600">
+                  <a href="https://wa.me/5599999999999" target="_blank">Clique aqui</a>
+                </div>
               </div>
           
               <!-- Instagram -->
-              <div class="flex flex-row items-center justify-center text-center space-x-4">
+              <div class="flex flex-col items-center text-center space-y-2">
                 <i class="fab fa-instagram text-3xl text-gray-600"></i>
                 <span class="text-xl text-gray-800">Instagram</span>
                 <div class="text-lg text-gray-600">@empresaInstagram</div>
               </div>
             </div>
           </section>
-
       <a
         href="https://wa.me/5599999999999"
         target="_blank"
@@ -633,5 +614,13 @@
     menuToggle.addEventListener("click", () => {
       menu.classList.toggle("hidden");
     });
+
+    setTimeout(() => {
+        document.querySelectorAll(".quadroInsta").forEach((iframe) => {
+            iframe.style.height = "680px";
+            iframe.style.width = "380px";
+            iframe.style.overflow = "hidden";
+        });
+        }, 2000);
   </script>
 </html>
