@@ -2,16 +2,28 @@ const { createApp } = Vue;
 
 createApp({
   data() {
-    const VERSION = "3"; // aumente para forçar recarregamento (cache-busting)
+    const VERSION = "3";
     const v = (url) => `${url}?v=${VERSION}`;
 
     return {
       // Banner
       currentSlide: 0,
       images: [
+          {
+          src: v("./assets/new-banner/solucao.png"),
+          alt: "Banner Grupo MRG",
+          title: "",
+          caption: "",
+        },
         {
           src: v("./assets/new-banner/obras-com-acompanhamento.png"),
           alt: "Banner obras com acompanhamento",
+          title: "",
+          caption: "",
+        },
+        {
+          src: v("./assets/new-banner/seguranca.png"),
+          alt: "Banner Grupo MRG",
           title: "",
           caption: "",
         },
@@ -27,9 +39,18 @@ createApp({
           title: "",
           caption: "",
         },
-        // Se quiser adicionar mais, mantenha o padrão acima
-        // { src: v("/mrg/assets/new-banner/revitalizacao-de-fachada.png"), alt: "Banner X", title: "", caption: "" },
-        // { src: v("/mrg/assets/new-banner/sistema-de-ancoragem.png"), alt: "Banner Y", title: "", caption: "" },
+        {
+          src: v("./assets/new-banner/atuando.png"),
+          alt: "Banner Grupo MRG",
+          title: "",
+          caption: "",
+        },
+        {
+          src: v("./assets/new-banner/grupo-mrg.png"),
+          alt: "Banner Grupo MRG",
+          title: "",
+          caption: "",
+        },
       ],
       autoRotateInterval: null,
 
@@ -38,22 +59,21 @@ createApp({
       currentImage: null,
       services: [
         {
-          src: v("/mrg/assets/new-banner/obras-com-acompanhamento.png"),
+          src: v("./assets/new-banner/1.png"),
           alt: "Serviço 1",
         },
         {
-          src: v("/mrg/assets/new-banner/revitalizacao-de-fachada-2.png"),
+          src: v("./assets/new-banner/2.png"),
           alt: "Serviço 2",
         },
         {
-          src: v("/mrg/assets/new-banner/grupo-mrg.png"),
+          src: v("./assets/new-banner/4.png"),
           alt: "Serviço 3",
         },
-        // Exemplos extras (descomente se existirem no repo):
-        // { src: v("/mrg/assets/new-banner/revitalizacao-de-fachada.png"), alt: "Serviço 4" },
-        // { src: v("/mrg/assets/new-banner/sistema-de-ancoragem.png"), alt: "Serviço 5" },
-        // { src: v("/mrg/assets/new-banner/impermeabilizacao-de-reservatorio.png"), alt: "Serviço 6" },
-        // { src: v("/mrg/assets/new-banner/Cristalize.png"), alt: "Serviço 7" }, // atenção ao C maiúsculo
+        {
+          src: v("./assets/new-banner/5.png"),
+          alt: "Serviço 4",
+        },
       ],
     };
   },
