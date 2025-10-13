@@ -67,12 +67,20 @@ createApp({
           alt: "Serviço 2",
         },
         {
+          src: v("./assets/new-banner/3.png"),
+          alt: "Serviço 3",
+        },
+        {
           src: v("./assets/new-banner/4.png"),
           alt: "Serviço 3",
         },
         {
           src: v("./assets/new-banner/5.png"),
           alt: "Serviço 4",
+        },
+        {
+          src: v("./assets/new-banner/6.png"),
+          alt: "Serviço 3",
         },
       ],
     };
