@@ -10,47 +10,42 @@ createApp({
       currentSlide: 0,
       images: [
           {
-          src: v("./assets/new-banner/solucao.png"),
+          src: v("./assets/new-banner/BannerOrder1.png"),
           alt: "Banner Grupo MRG",
           title: "",
           caption: "",
         },
         {
-          src: v("./assets/new-banner/obras-com-acompanhamento.png"),
+          src: v("./assets/new-banner/BannerOrder2.png"),
           alt: "Banner obras com acompanhamento",
           title: "",
           caption: "",
         },
         {
-          src: v("./assets/new-banner/seguranca.png"),
+          src: v("./assets/new-banner/BannerOrder3.png"),
           alt: "Banner Grupo MRG",
           title: "",
           caption: "",
         },
         {
-          src: v("./assets/new-banner/revitalizacao-de-fachada-2.png"),
+          src: v("./assets/new-banner/BannerOrder4.png"),
           alt: "Banner revitalização de fachada 2",
           title: "",
           caption: "",
         },
         {
-          src: v("./assets/new-banner/grupo-mrg.png"),
+          src: v("./assets/new-banner/BannerOrder5.png"),
           alt: "Banner Grupo MRG",
           title: "",
           caption: "",
         },
         {
-          src: v("./assets/new-banner/atuando.png"),
+          src: v("./assets/new-banner/BANNER.png"),
           alt: "Banner Grupo MRG",
           title: "",
           caption: "",
         },
-        {
-          src: v("./assets/new-banner/grupo-mrg.png"),
-          alt: "Banner Grupo MRG",
-          title: "",
-          caption: "",
-        },
+        
       ],
       autoRotateInterval: null,
 

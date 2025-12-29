@@ -107,10 +107,10 @@
 }
 
 .quadroInsta {
-  width: 100%;
+  width: 20%;
   max-width: 800px;
-  height: 1000px !important;
-  min-height: 1000px;
+  height: 900px !important;
+  min-height: 900px;
   border: none;
   overflow: hidden;
 }
